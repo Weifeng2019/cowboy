@@ -71,7 +71,7 @@ public class SwaggerController {
      * @return
      */
     @ApiOperation(value="创建用户", notes="根据User对象创建用户")
-    @ApiImplicitParam(name = "user", value = "用户详细实体user", required = true, dataType = "User")
+    @ApiImplicitParam(name = "user", value = "用户详细实体user", required = true, dataType = "MQUser")
     @RequestMapping(value = "user", method = RequestMethod.POST)
     public ResponseEntity<JsonResult> add (@RequestBody User user){
         JsonResult r = new JsonResult();
@@ -119,7 +119,7 @@ public class SwaggerController {
     @ApiOperation(value="更新信息", notes="根据url的id来指定更新用户信息")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "id", value = "用户ID", required = true, dataType = "Long",paramType = "path"),
-            @ApiImplicitParam(name = "user", value = "用户实体user", required = true, dataType = "User")
+            @ApiImplicitParam(name = "user", value = "用户实体user", required = true, dataType = "MQUser")
     })
     @RequestMapping(value = "user/{id}", method = RequestMethod.PUT)
     public ResponseEntity<JsonResult> update (@PathVariable("id") Integer id, @RequestBody User user){

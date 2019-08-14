@@ -8,6 +8,7 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 
 public class NettyServer {
 
+
     public static void main(String[] args){
         NioEventLoopGroup firstGroup = new NioEventLoopGroup();
         NioEventLoopGroup secondGroup = new NioEventLoopGroup();
